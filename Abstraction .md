@@ -29,7 +29,7 @@ To create an **abstract class** named `Shape` with an **abstract method** `calcu
 ---
 
 ## 💻 Program
-```
+~~~~~~~~~~~~~
 from abc import ABC, abstractmethod
 
 class Shape(ABC):
@@ -37,34 +37,33 @@ class Shape(ABC):
     def calculate_area(self):
         pass
 
+
 class Rectangle(Shape):
-    def __init__(self, length, breadth):
+    def __init__(self, length, width):
         self.length = length
-        self.breadth = breadth
+        self.width = width
 
     def calculate_area(self):
-        return self.length * self.breadth
+        return self.length * self.width
+
 
 class Circle(Shape):
     def __init__(self, radius):
         self.radius = radius
 
     def calculate_area(self):
-        return 3.14 * self.radius * self.radius
-
-r = Rectangle(5, 4)
-c = Circle(3)
-
-print("Area of rectangle:", r.calculate_area())
-print("Area of circle:", c.calculate_area())
-```
+        pi = 3.14  # Use 3.14 to get exact 50.24
+        return pi * self.radius ** 2
 
 
+rect = Rectangle(5, 3)
+print("Area of a rectangle:", rect.calculate_area())
+
+circle = Circle(4)
+print("Area of a circle:", circle.calculate_area())
+~~~~~~~~~~~~~~~~~~~~~
 ## Output
-```
-Area of rectangle: 20
-Area of circle: 28.26
-```
+<img width="621" height="164" alt="WhatsApp Image 2026-05-28 at 9 29 34 PM" src="https://github.com/user-attachments/assets/a776e8a6-b915-4705-a0ba-63d66cc732e8" />
 
 
 ## Result
